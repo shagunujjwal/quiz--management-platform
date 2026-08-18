@@ -12,11 +12,14 @@ const PORT = process.env.PORT || 5000;
 
 // =====================================================
 // MIDDLEWARE
-// =====================================================
-
+// ==================================================
 app.use(
   cors({
-    origin: "https://quiz-management-platform-gamma.vercel.app",
+    origin: [
+      "http://localhost:5173",
+      "https://quiz-management-platform-gamma.vercel.app",
+      "https://quiz-management-platform-3wuirlfan-shagunujjwal1.vercel.app",
+    ],
     credentials: true,
   })
 );
