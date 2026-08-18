@@ -1,18 +1,23 @@
 const express = require("express");
 const cors = require("cors");
 
-// Routes
+// =====================================================
+// ROUTES
+// =====================================================
+
 const authRoutes = require("./routes/auth");
 const quizRoutes = require("./routes/quiz");
 const userRoutes = require("./routes/users");
 const attemptsRoutes = require("./routes/attempts");
+
 const app = express();
 
 const PORT = process.env.PORT || 5000;
 
 // =====================================================
 // MIDDLEWARE
-// ==================================================
+// =====================================================
+
 app.use(
   cors({
     origin: [
@@ -55,7 +60,14 @@ app.use("/api/quizzes", quizRoutes);
 app.use("/api/users", userRoutes);
 
 // =====================================================
+// ATTEMPT / RESULT ROUTES
+// =====================================================
+
+app.use("/api/attempts", attemptsRoutes);
+
+// =====================================================
 // 404 ROUTE
+// IMPORTANT: This must be AFTER all API routes
 // =====================================================
 
 app.use((req, res) => {
@@ -75,12 +87,13 @@ app.use((err, req, res, next) => {
     message: "Internal server error",
   });
 });
-app.use("/api/attempts", attemptsRoutes);
 
 // =====================================================
 // START SERVER
 // =====================================================
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(
+    `🚀 Server running on http://localhost:${PORT}`
+  );
 });
