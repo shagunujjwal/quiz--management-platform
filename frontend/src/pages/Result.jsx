@@ -25,7 +25,7 @@ function Results() {
       }
 
       const response = await axios.get(
-        `http://localhost:5000/api/attempts/user/${storedUser.id}`
+        `https://quiz-management-platform-hg8y.onrender.com/api/attempts/user/${storedUser.id}`
       );
 
       console.log("MY RESULTS:", response.data);

@@ -22,7 +22,7 @@ function AdminDashboard() {
       setLoading(true);
 
       const response = await axios.get(
-        "http://localhost:5000/api/quizzes"
+        "https://quiz-management-platform-hg8y.onrender.com/api/quizzes"
       );
 
       console.log("ADMIN QUIZZES:", response.data);
@@ -57,7 +57,7 @@ function AdminDashboard() {
       setDeleting(id);
 
       const response = await axios.delete(
-        `http://localhost:5000/api/quizzes/${id}`
+        `https://quiz-management-platform-hg8y.onrender.com/api/quizzes/${id}`
       );
 
       console.log("DELETE QUIZ:", response.data);

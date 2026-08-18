@@ -15,7 +15,7 @@ function AdminResults() {
   const loadResults = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/attempts"
+        "https://quiz-management-platform-hg8y.onrender.com/api/attempts"
       );
 
       console.log("ALL ATTEMPTS:", response.data);

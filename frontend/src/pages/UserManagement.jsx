@@ -24,7 +24,7 @@ function UserManagement() {
       setError("");
 
       const response = await axios.get(
-        "http://localhost:5000/api/users"
+        "https://quiz-management-platform-hg8y.onrender.com/api/users"
       );
 
       console.log("USERS:", response.data);

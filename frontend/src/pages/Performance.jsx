@@ -34,7 +34,7 @@ function Performance() {
       }
 
       const response = await axios.get(
-        `http://localhost:5000/api/attempts/user/${savedUser.id}`
+        `https://quiz-management-platform-hg8y.onrender.com/api/attempts/user/${savedUser.id}`
       );
 
       console.log(

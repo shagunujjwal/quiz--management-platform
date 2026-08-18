@@ -54,7 +54,7 @@ function Login() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://quiz-management-platform-hg8y.onrender.com/api/auth/login",
         {
           email: form.email.trim(),
           password: form.password,

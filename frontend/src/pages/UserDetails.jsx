@@ -20,7 +20,7 @@ function UserDetails() {
       setError("");
 
       const response = await axios.get(
-        `http://localhost:5000/api/users/${id}`
+        `https://quiz-management-platform-hg8y.onrender.com/api/users/${id}`
       );
 
       console.log("USER DETAILS:", response.data);

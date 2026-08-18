@@ -25,7 +25,7 @@ function EditQuiz() {
     const loadQuiz = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/quizzes/${id}`
+          `https://quiz-management-platform-hg8y.onrender.com/api/quizzes/${id}`
         );
 
         const quiz = response.data;
@@ -203,7 +203,7 @@ function EditQuiz() {
       setSaving(true);
 
       const response = await axios.put(
-        `http://localhost:5000/api/quizzes/${id}`,
+        `https://quiz-management-platform-hg8y.onrender.com/api/quizzes/${id}`,
         {
           title,
           description,

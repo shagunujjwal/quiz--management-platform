@@ -26,7 +26,7 @@ function Dashboard() {
     const fetchQuizzes = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/quizzes"
+          "https://quiz-management-platform-hg8y.onrender.com/api/quizzes"
         );
 
         setQuizzes(response.data);

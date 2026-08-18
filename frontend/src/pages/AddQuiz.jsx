@@ -102,7 +102,7 @@ function AddQuiz() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/quizzes",
+        "https://quiz-management-platform-hg8y.onrender.com/api/quizzes",
         {
           title,
           description,
