@@ -22,7 +22,7 @@ function Quiz() {
     const loadQuiz = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/quizzes/${id}`
+          `https://quiz-management-platform-hg8y.onrender.com/api/quizzes/${id}`
         );
 
         console.log("QUIZ LOADED:", response.data);
@@ -167,7 +167,7 @@ function Quiz() {
       // =================================================
 
       const response = await axios.post(
-        "http://localhost:5000/api/attempts",
+        "https://quiz-management-platform-hg8y.onrender.com/api/attempts",
         {
           quizId: Number(id),
 
