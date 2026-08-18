@@ -5,7 +5,7 @@ const cors = require("cors");
 const authRoutes = require("./routes/auth");
 const quizRoutes = require("./routes/quiz");
 const userRoutes = require("./routes/users");
-
+const attemptsRoutes = require("./routes/attempts");
 const app = express();
 
 const PORT = process.env.PORT || 5000;
@@ -75,6 +75,7 @@ app.use((err, req, res, next) => {
     message: "Internal server error",
   });
 });
+app.use("/api/attempts", attemptsRoutes);
 
 // =====================================================
 // START SERVER
